@@ -4,8 +4,7 @@ import { LucideBook, LucideUser } from 'lucide-react';
 
 function Navbar() {
   return (
-    <nav className="bg-gray-800 p-4">
-      <div className="container mx-auto flex justify-between items-center">
+      <nav className="bg-gray-800 w-full p-4 flex justify-between items-center">
         <Link to="/" className="text-white text-lg font-bold">
           <LucideBook size={24} /> BookMarket
         </Link>
@@ -19,9 +18,14 @@ function Navbar() {
           <li>
             <Link to="/payment" className="text-white">Payment</Link>
           </li>
+          <li>
+            <input type="text" placeholder="Search..." className="p-2 rounded" />
+          </li>
+          <li>
+            <button className="text-white">Login</button> / <button className="text-white">Register</button>
+          </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
   );
 }
 
